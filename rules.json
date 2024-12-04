@@ -1,0 +1,76 @@
+{
+  "rules": [
+    {
+      "rule_name": "rule_1",
+      "rule description": "", 
+      "predicate": "All",
+      "conditions": [
+        {
+          "field": "From",
+          "predicate": "Contains",
+          "value": "citi.com"
+        },
+        {
+          "field": "Subject",
+          "predicate": "Contains",
+          "value": "Citi"
+        },
+        {
+          "field": "Received Date/Time",
+          "predicate": "Less than",
+          "value": "30 days ago"
+        }
+      ],
+      "actions": [
+        {
+          "action": "Mark as unread"
+        }
+      ]
+    },
+    {
+      "rule_name": "rule_2",
+      "rule description": "", 
+      "predicate": "Any",
+      "conditions": [
+        {
+          "field": "From",
+          "predicate": "Equals",
+          "value": "newsletter@example.com"
+        },
+        {
+          "field": "From",
+          "predicate": "Equals",
+          "value": "estatement@icicibank.com"
+        }
+      ],
+      "actions": [
+        {
+          "action": "Mark as unread"
+        }
+      ]
+    },
+    {
+      "rule_name": "rule_3",
+      "rule description": "", 
+      "predicate": "Any",
+      "conditions": [
+        {
+          "field": "From",
+          "predicate": "Equals",
+          "value": "newsletter@example.com"
+        },
+        {
+          "field": "From",
+          "predicate": "Equals",
+          "value": "online-admissions@seas.upenn.edu"
+        }
+      ],
+      "actions": [
+        {
+          "action": "Move Message",
+          "destination": "TRASH"
+        }
+      ]
+    }
+  ]
+}
