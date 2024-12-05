@@ -23,11 +23,11 @@ def mark_as_read(service, email_id):
         print(f'An error occurred while marking email as read: {e}')
 
 def mark_as_unread(service, email_id):
-    """Marks an email as read.
+    """Marks an email as unread.
 
     Args:
         service: The Gmail API service instance.
-        email_id: The ID of the email to mark as read.
+        email_id: The ID of the email to mark as unread.
     """
     try:
         # Define the request body to modify the email's labels
